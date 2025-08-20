@@ -1,84 +1,151 @@
-
 # Python Basics
 
-A beginner-friendly guide to learning the fundamentals of Python programming.  
-This document covers essential Python concepts such as variables, data types, operators, conditionals, loops, functions, and more.
+This repository contains beginner-friendly notes and examples for
+learning Python programming. It covers the essential concepts like
+variables, data types, operators, conditionals, loops, and functions
+with clear explanations and code examples.
 
----
+------------------------------------------------------------------------
 
-## 📌 Topics Covered
+## 📌 Introduction
 
-### 1. Variables
-- Variables store data values in memory.
-- Python is **dynamically typed** (no need to declare types explicitly).
-- Naming rules:
-  - Allowed: letters (A-Z, a-z), digits (0-9, but not at the start), underscores (`_`)
-  - Not Allowed: starting with digits, special symbols (`@`, `#`, `$`, etc.), Python keywords (`if`, `for`, `class`, etc.)
+-   **High-level Language** → Easy-to-read, powerful programming
+    language used in web development, data science, AI, automation,
+    etc.\
+-   **Interpreted & Dynamically Typed** → No compilation required, no
+    explicit type declaration.\
+-   **Beginner-Friendly** → Syntax similar to English.
 
-### 2. Data Types
-- **Numeric**: `int`, `float`, `complex`
-- **Sequence**: `str`, `list`, `tuple`, `range`
-- **Set**: `set`, `frozenset`
-- **Mapping**: `dict`
-- **Boolean**: `bool` (`True` / `False`)
-- **NoneType**: `None`
-- **Binary**: `bytes`, `bytearray`, `memoryview`
+------------------------------------------------------------------------
 
-### 3. Operators
-- **Arithmetic** → `+`, `-`, `*`, `/`, `%`, `//`, `**`
-- **Assignment** → `=`, `+=`, `-=`, `*=`, `/=`, `%=` 
-- **Comparison** → `==`, `!=`, `>`, `<`, `>=`, `<=`
-- **Logical** → `and`, `or`, `not`
-- **Bitwise** → `&`, `|`, `^`, `~`, `<<`, `>>`
-- **Identity** → `is`, `is not`
-- **Membership** → `in`, `not in`
+## 🖨️ Input & Output
 
-### 4. Conditional Statements
-- `if`, `if-else`, `if-elif-else`
-- Nested `if`
-- Ternary operator (single-line `if-else`)
+### `print()`
 
-### 5. Loops
-- **For loop**
-  - Iterates over sequences (lists, strings, ranges)
-  - Supports `break` and `continue`
-- **While loop**
-  - Runs until a condition becomes false
-  - Can create infinite loops if the condition never changes
+-   Purpose: Display output on the screen.\
+-   **Arguments**:
+    -   `objects` → values to print\
+    -   `sep` → separator (default `" "`)\
+    -   `end` → string added after output (default `" "`)
 
-### 6. Functions
-- **Built-in Functions**: `print()`, `len()`, `sum()`, etc.
-- **User-defined Functions**: Created with `def`
-- **Lambda Functions**: One-line anonymous functions (`lambda args: expression`)
+Example:
 
-### 7. String Formatting
-- **Old Style**: `%` operator
-- **`str.format()`** method
-- **F-strings** (Python 3.6+)
+``` python
+print("Hello", "World", sep="-", end="!!")
+# Output: Hello-World!!
+```
 
----
+### `input()`
 
-## 📂 Example Code
+-   Purpose: Take user input (always as string).\
+-   **Arguments**:
+    -   `prompt` → message displayed before input
 
-```python
-# Variable and Type
-x = 5
-print(x, type(x))
+Example:
 
-# List
-my_list = [1, 2, 3]
-print(my_list)
+``` python
+name = input("Enter your name: ")
+print("Welcome,", name)
+```
 
-# If-else
-age = 20
-print("Adult" if age >= 18 else "Minor")
+------------------------------------------------------------------------
 
-# For loop
-for i in range(3):
+## 📝 Variables
+
+-   Containers for storing data.\
+-   Python is **dynamically typed** → No need to declare types.
+
+✅ Allowed: letters, digits (not at start), underscores\
+❌ Not Allowed: start with digit, special symbols (@, #, ...), keywords
+
+------------------------------------------------------------------------
+
+## 🔢 Data Types
+
+-   **Numeric** → `int`, `float`, `complex`\
+-   **Sequence** → `str`, `list`, `tuple`, `range`\
+-   **Set** → `set`, `frozenset`\
+-   **Mapping** → `dict`\
+-   **Boolean** → `True`, `False`\
+-   **None** → `NoneType`\
+-   **Binary** → `bytes`, `bytearray`, `memoryview`
+
+------------------------------------------------------------------------
+
+## 🧮 Operators
+
+1.  Arithmetic → `+ - * / % // **`\
+2.  Assignment → `= += -= *= /=`\
+3.  Relational → `== != > < >= <=`\
+4.  Logical → `and or not`\
+5.  Bitwise → `& | ^ ~ << >>`\
+6.  Identity → `is, is not`\
+7.  Membership → `in, not in`
+
+------------------------------------------------------------------------
+
+## 🔀 Conditional Statements
+
+-   **Simple if-else**\
+-   **if-elif-else Ladder**\
+-   **Nested if**\
+-   **Ternary (Single-line if-else)**
+
+Example:
+
+``` python
+marks = 78
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+else:
+    print("Fail")
+```
+
+------------------------------------------------------------------------
+
+## 🔁 Loops
+
+-   **For Loop** → Iterates over sequences or ranges\
+-   **While Loop** → Repeats until a condition becomes False\
+-   Supports **break** and **continue**
+
+Example:
+
+``` python
+for i in range(5):
     print(i)
 
-# Function
-def greet(name):
-    return f"Hello, {name}!"
-print(greet("Chetan"))
+count = 1
+while count <= 5:
+    print(count)
+    count += 1
+```
 
+------------------------------------------------------------------------
+
+## ⚙️ Functions
+
+-   **Built-in Functions** → e.g., `print()`, `len()`, `sum()`\
+-   **User-defined Functions** → Created using `def`\
+-   **Lambda Functions** → Anonymous, single-expression functions
+
+Example:
+
+``` python
+def add(a, b):
+    return a + b
+
+square = lambda x: x**2
+```
+
+------------------------------------------------------------------------
+
+## 📚 Key Takeaways
+
+-   Python is simple, powerful, and beginner-friendly.\
+-   Variables are dynamically typed.\
+-   Rich set of **data types & operators**.\
+-   Supports **control flow** with if-else, loops, and functions.\
+-   Great for web, AI, automation, and more.
